@@ -18,15 +18,15 @@
   --surface3:  #1a2720;
   --border:    #1e3324;
   --border2:   #264433;
-  --green:     #00e676;
-  --green2:    #69f0ae;
-  --green3:    #00c853;
-  --green-dim: #004d1a;
-  --green-glow:rgba(0,230,118,0.15);
-  --text:      #e8f5e9;
-  --text2:     #a5d6a7;
-  --muted:     #4caf50;
-  --muted2:    #2e7d32;
+  --green:     #4d9966;
+  --green2:    #7ab893;
+  --green3:    #3d8055;
+  --green-dim: #1a3d28;
+  --green-glow:rgba(77,153,102,0.12);
+  --text:      #dde8de;
+  --text2:     #8fb899;
+  --muted:     #4a7d57;
+  --muted2:    #2e5c3a;
   --font:      'Inter', sans-serif;
   --mono:      'IBM Plex Mono', monospace;
   --r:         12px;
@@ -150,7 +150,7 @@ nav {
   font-weight: 600;
   color: #fff;
   border: 2px solid var(--border2);
-  box-shadow: 0 0 32px rgba(0,230,118,0.2);
+  box-shadow: 0 0 24px rgba(77,153,102,0.15);
   position: relative;
 }
 
@@ -628,10 +628,10 @@ section { margin-bottom: 2.5rem; }
 }
 
 .contrib-cell:hover { transform: scale(1.4); }
-.contrib-cell.l1 { background: #003300; }
-.contrib-cell.l2 { background: #006400; }
-.contrib-cell.l3 { background: #00a550; }
-.contrib-cell.l4 { background: var(--green); box-shadow: 0 0 4px var(--green); }
+.contrib-cell.l1 { background: #1a3d28; }
+.contrib-cell.l2 { background: #2d6644; }
+.contrib-cell.l3 { background: #3d8055; }
+.contrib-cell.l4 { background: var(--green); box-shadow: 0 0 4px rgba(77,153,102,0.5); }
 
 /* ── SCROLL REVEAL ── */
 .reveal {
@@ -700,30 +700,12 @@ footer span { color: var(--green); }
     </div>
     <div class="cta-row">
       <a href="mailto:garg.daksh0906@gmail.com" class="btn btn-primary">✉ Get in Touch</a>
-      <a href="#experience" class="btn btn-secondary">View My Work ↓</a>
+      <a href="#projects" class="btn btn-secondary">View My Work ↓</a>
     </div>
   </div>
 </div>
 
-<!-- STATS -->
-<div class="stats-bar reveal">
-  <div class="stat-card">
-    <div class="stat-num" data-target="3">0</div>
-    <div class="stat-label">Years in Robotics</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-num" data-target="10">0</div>
-    <div class="stat-label">Team Members Led</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-num" data-target="100">0</div>
-    <div class="stat-label">Volunteer Hours</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-num" data-target="3">0</div>
-    <div class="stat-label">Active Projects</div>
-  </div>
-</div>
+
 
 <!-- MAIN GRID -->
 <div class="container">
@@ -738,15 +720,40 @@ footer span { color: var(--green); }
 
       <div class="exp-card reveal">
         <div class="exp-header">
-          <div class="exp-title">AGI-Core Research Group — First Year Scholars Research</div>
-          <span class="exp-date">2025 – Present</span>
+          <div class="exp-title">Research Assistant — Bio-Robotic Sensing</div>
+          <span class="exp-date">Summer 2026</span>
         </div>
-        <div class="exp-subtitle">// Robotics & Autonomous Systems Research · Kennesaw State University</div>
+        <div class="exp-subtitle">Undergraduate Research · Kennesaw State University</div>
+        <ul>
+          <li>Designing a robotic hand in SolidWorks that mirrors human proportions, with internal channels routing biomedical sensors and wiring through each finger</li>
+          <li>Integrating five physiological sensors (EDA, PPG, EMG, accelerometer, temperature) to detect physical fatigue in real time during contact-based tasks</li>
+          <li>Building an embedded control system using PWM-driven servomotors for smooth, reliable finger actuation and consistent sensor contact</li>
+          <li>Developing signal filtering algorithms and supervised machine learning models (regression) to interpret sensor readings across varying skin tones and surface conditions</li>
+          <li>Prototyping with PLA/TPU via additive manufacturing for rapid iteration and cost-effective design refinement</li>
+          <li>Calibrating all sensors against standard medical devices to validate heart rate, SpO₂, and other physiological measurements within accepted error margins</li>
+        </ul>
+        <div class="tech-row">
+          <span class="tech-pill"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+          <span class="tech-pill"><span class="lang-dot" style="background:#f34b7d"></span>SolidWorks</span>
+          <span class="tech-pill"><span class="lang-dot" style="background:#00bcd4"></span>Embedded Systems</span>
+          <span class="tech-pill"><span class="lang-dot" style="background:#89e051"></span>Machine Learning</span>
+          <span class="tech-pill"><span class="lang-dot" style="background:#e0d060"></span>3D Printing</span>
+          <span class="tech-pill"><span class="lang-dot" style="background:#ff8a65"></span>Biomedical Sensors</span>
+        </div>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-header">
+          <div class="exp-title">AGI-Core Research Group — First Year Scholars Research</div>
+          <span class="exp-date">2025 – 2026</span>
+        </div>
+        <div class="exp-subtitle">First Year Scholars Research · Robotics & Autonomous Systems · Kennesaw State University</div>
         <ul>
           <li>Designing and implementing robust Python and C++ solutions for robotics pipelines</li>
           <li>Performing multi-sensor calibration and implementing basic sensor fusion techniques</li>
           <li>Integrating LiDAR, IMU, and camera data streams using ROS 2 middleware</li>
           <li>Presenting research outcomes using clear visuals and concise summaries to faculty</li>
+
         </ul>
         <div class="tech-row">
           <span class="tech-pill"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
@@ -759,9 +766,9 @@ footer span { color: var(--green); }
       <div class="exp-card reveal">
         <div class="exp-header">
           <div class="exp-title">SAE Formula Team — Powertrain &amp; DAQ</div>
-          <span class="exp-date">2025 – Present</span>
+          <span class="exp-date">2025 – 2026</span>
         </div>
-        <div class="exp-subtitle">// Embedded Instrumentation & Real-Time Telemetry · KSU Racing</div>
+        <div class="exp-subtitle">Embedded Instrumentation & Real-Time Telemetry · KSU Racing</div>
         <ul>
           <li>Implemented strain-gauge instrumentation on critical suspension structures for accurate stress analysis</li>
           <li>Monitored and logged car vitals during practice races using custom DAQ hardware</li>
@@ -776,10 +783,10 @@ footer span { color: var(--green); }
 
       <div class="exp-card reveal">
         <div class="exp-header">
-          <div class="exp-title">FRC Robotics — Robot &amp; Arena Captain</div>
+          <div class="exp-title">FRC Robotics — Robot Support &amp; Arena Captain</div>
           <span class="exp-date">2022 – 2025</span>
         </div>
-        <div class="exp-subtitle">// Competition Robotics — Design, Build & Operations · Innovation Academy</div>
+        <div class="exp-subtitle">Competition Robotics — Design, Build & Operations · Innovation Academy</div>
         <ul>
           <li>Led and supervised a team of 10+ individuals across three competitive seasons</li>
           <li>Efficiently repaired robot damage within limited timeframes during live competitions</li>
@@ -837,17 +844,14 @@ footer span { color: var(--green); }
       </div>
     </section>
 
-    <!-- ACTIVITY -->
-    <section>
+    <!-- PROJECTS -->
+    <section id="projects">
       <div class="section-header">
-        <span class="icon">📊</span>
-        <h2>Activity</h2>
+        <span class="icon">🚀</span>
+        <h2>Projects</h2>
       </div>
       <div class="side-card reveal">
-        <div class="contrib-wrap">
-          <div class="contrib-grid" id="contrib"></div>
-        </div>
-        <p style="font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:0.8rem;">Contributions this year</p>
+        <p style="font-family:var(--mono);font-size:12px;color:var(--muted);text-align:center;padding:1.5rem 0;">Projects coming soon...</p>
       </div>
     </section>
 
@@ -887,22 +891,6 @@ footer span { color: var(--green); }
       <div class="achievement">
         <div class="badge">🏅</div>
         <p><strong>Gold PVSA</strong> Volunteering Award (100+ hours)</p>
-      </div>
-    </div>
-
-    <div class="side-card reveal">
-      <h3>Currently</h3>
-      <div class="achievement">
-        <div class="badge">🔬</div>
-        <p>Researching multi-sensor integration at AGI-Core Lab</p>
-      </div>
-      <div class="achievement">
-        <div class="badge">🏎️</div>
-        <p>Building telemetry systems for KSU SAE Formula car</p>
-      </div>
-      <div class="achievement">
-        <div class="badge">📚</div>
-        <p>Studying Mechatronics at KSU (GPA focused, Class of 2028)</p>
       </div>
     </div>
 
@@ -1051,26 +1039,9 @@ function animateCounters() {
   });
 }
 
-const statsObs = new IntersectionObserver((entries) => {
-  if (entries[0].isIntersecting) { animateCounters(); statsObs.disconnect(); }
-}, { threshold: 0.3 });
-statsObs.observe(document.querySelector('.stats-bar'));
 
-/* ── CONTRIBUTION GRAPH ── */
-const grid = document.getElementById('contrib');
-const lvls = [0,0,0,0,1,1,2,3,4];
-const cls  = l => l === 0 ? '' : `l${l}`;
-for (let w = 0; w < 35; w++) {
-  const col = document.createElement('div');
-  col.className = 'contrib-col';
-  for (let d = 0; d < 7; d++) {
-    const cell = document.createElement('div');
-    const l = lvls[Math.floor(Math.random() * lvls.length)];
-    cell.className = 'contrib-cell ' + cls(l);
-    col.appendChild(cell);
-  }
-  grid.appendChild(col);
-}
+
+
 </script>
 </body>
 </html>
