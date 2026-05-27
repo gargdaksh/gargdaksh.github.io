@@ -711,6 +711,25 @@ footer span { color: var(--green); }
 <div class="container">
   <main>
 
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-header">
+        <span class="icon">👤</span>
+        <h2>About</h2>
+      </div>
+      <div class="exp-card reveal" style="margin-bottom:0.9rem;">
+        <p style="font-size:14px;color:var(--text2);line-height:1.85;margin-bottom:1rem;">
+          I'm Daksh — a first-year Mechatronics Engineering student at Kennesaw State University with a passion for building systems that sit at the boundary of the physical and digital world. Growing up, I was the kind of person who wanted to know how everything worked, which eventually led me to robotics, embedded systems, and engineering.
+        </p>
+        <p style="font-size:14px;color:var(--text2);line-height:1.85;margin-bottom:1rem;">
+          Right now I'm doing research on a bio-robotic hand that can read physiological signals like heart rate, oxygen levels, and muscle activity — essentially giving a robot the ability to sense fatigue in real time. Outside of that, I spent the past year on KSU's SAE Formula team instrumenting a race car with strain gauges and DAQ systems, and before that I spent three years captaining an FRC robotics team through builds, competitions, and everything in between.
+        </p>
+        <p style="font-size:14px;color:var(--text2);line-height:1.85;">
+          Beyond engineering, I hold a 2nd degree black belt in Taekwondo, played varsity tennis, and founded the Georgia branch of Closing the Divide — a nonprofit focused on bridging opportunity gaps. I speak English and Hindi fluently, and I'm always looking for the next problem worth solving.
+        </p>
+      </div>
+    </section>
+
     <!-- EXPERIENCE -->
     <section id="experience">
       <div class="section-header">
@@ -802,6 +821,17 @@ footer span { color: var(--green); }
       </div>
     </section>
 
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-header">
+        <span class="icon">🚀</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="side-card reveal">
+        <p style="font-family:var(--mono);font-size:12px;color:var(--muted);text-align:center;padding:1.5rem 0;">Projects coming soon...</p>
+      </div>
+    </section>
+
     <!-- SKILLS -->
     <section id="skills">
       <div class="section-header">
@@ -824,34 +854,6 @@ footer span { color: var(--green); }
         <span class="tag">Excel</span>
         <span class="tag">PowerPoint</span>
         <span class="tag g">Hindi (Fluent)</span>
-      </div>
-    </section>
-
-    <!-- TERMINAL / ABOUT -->
-    <section id="about">
-      <div class="section-header">
-        <span class="icon">💻</span>
-        <h2>About</h2>
-      </div>
-      <div class="terminal reveal">
-        <div class="terminal-bar">
-          <div class="t-dot r"></div>
-          <div class="t-dot y"></div>
-          <div class="t-dot g"></div>
-          <span class="t-title">daksh@portfolio ~ bash</span>
-        </div>
-        <div class="terminal-body" id="term-body"></div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="section-header">
-        <span class="icon">🚀</span>
-        <h2>Projects</h2>
-      </div>
-      <div class="side-card reveal">
-        <p style="font-family:var(--mono);font-size:12px;color:var(--muted);text-align:center;padding:1.5rem 0;">Projects coming soon...</p>
       </div>
     </section>
 
@@ -986,36 +988,7 @@ function type() {
 
 setTimeout(type, 600);
 
-/* ── TERMINAL ANIMATION ── */
-const termLines = [
-  { type:'prompt', text:'whoami' },
-  { type:'out g',  text:'daksh-garg' },
-  { type:'prompt', text:'cat interests.txt' },
-  { type:'out m',  text:'Robotics  Embedded Systems  Sensor Fusion  Formula SAE' },
-  { type:'prompt', text:'./status.sh' },
-  { type:'out g',  text:'[✓] Currently: Building telemetry @ KSU SAE Formula' },
-  { type:'out g',  text:'[✓] Research:  Multi-sensor fusion @ AGI-Core Lab' },
-  { type:'out g',  text:'[✓] Status:    Open to internships & research roles' },
-  { type:'prompt', text:'echo $GOAL' },
-  { type:'out m',  text:'To engineer autonomous systems that push the real world forward.' },
-];
 
-function buildTerm() {
-  const body = document.getElementById('term-body');
-  termLines.forEach((l, i) => {
-    const div = document.createElement('div');
-    div.className = 't-line';
-    if (l.type === 'prompt') {
-      div.innerHTML = `<span class="t-prompt">daksh@portfolio:~$</span><span class="t-cmd"> ${l.text}</span>`;
-    } else {
-      div.innerHTML = `<span class="t-out ${l.type.replace('out ','')}"> ${l.text}</span>`;
-    }
-    body.appendChild(div);
-    setTimeout(() => div.classList.add('show'), i * 260);
-  });
-}
-
-setTimeout(buildTerm, 800);
 
 /* ── SCROLL REVEAL ── */
 const revealEls = document.querySelectorAll('.reveal');
